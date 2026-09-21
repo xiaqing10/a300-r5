@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="a300_gazebo">
+  <xacro:macro name="a300_gazebo_plugins" params="">
+    <!-- Gazebo-specific systems will be added after the measured wheel geometry is available. -->
+  </xacro:macro>
+</robot>
