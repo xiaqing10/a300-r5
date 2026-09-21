@@ -1,0 +1,7 @@
+# Parameters mirror the A300 integration intent.
+# The exact argument names must be checked against the installed BlueSea driver release.
+port: /dev/ttyUSB0
+scan_topic: /scan
+frame_id: laser_link
+min_dist: 0.05
+max_dist: 12.0
