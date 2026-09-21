@@ -1,0 +1,7 @@
+a300_joystick_mapper:
+  ros__parameters:
+    axis_linear: 1
+    axis_angular: 0
+    max_linear_speed: 0.8
+    max_angular_speed: 1.0
+    deadzone: 0.08
