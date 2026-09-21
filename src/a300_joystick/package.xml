@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>a300_joystick</name><version>0.1.0</version>
+  <description>A300 joystick mapper.</description>
+  <maintainer email="dev@a300.local">A300 Development</maintainer><license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend><depend>rclcpp</depend><depend>geometry_msgs</depend><depend>sensor_msgs</depend><exec_depend>joy</exec_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>
