@@ -1,0 +1,14 @@
+a300_safety_controller:
+  ros__parameters:
+    scan_topic: /scan
+    desired_cmd_topic: /cmd_vel_desired
+    safe_cmd_topic: /cmd_vel
+    warning_distance: 1.20
+    slow_distance: 0.80
+    stop_distance: 0.35
+    front_half_angle_deg: 30.0
+    side_angle_min_deg: 30.0
+    side_angle_max_deg: 100.0
+    max_linear_speed: 0.80
+    max_angular_speed: 1.00
+    reverse_allowed: false
