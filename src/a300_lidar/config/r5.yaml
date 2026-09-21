@@ -1,7 +1,31 @@
-# Parameters mirror the A300 integration intent.
-# The exact argument names must be checked against the installed BlueSea driver release.
-port: /dev/ttyUSB0
-scan_topic: /scan
-frame_id: laser_link
-min_dist: 0.05
-max_dist: 12.0
+bluesea_node:
+  ros__parameters:
+    frame_id: "laser_link"
+    scan_topic: "scan"
+    cloud_topic: "cloud"
+    dev_id: -1
+    raw_bytes: 3
+    output_360: true
+    output_scan: true
+    output_cloud2: false
+    with_angle_filter: false
+    min_angle: -3.1415926
+    max_angle: 3.1415926
+    hard_resample: false
+    soft_resample: false
+    with_checksum: true
+    reversed: false
+    min_dist: 0.05
+    max_dist: 12.0
+    error_circle: 3
+    error_scale: 0.9
+    type: "uart"
+    port: "/dev/ttyUSB0"
+    baud_rate: 230400
+    uuid: -1
+    resample_res: -1.0
+    with_confidence: -1
+    with_smooth: -1
+    with_deshadow: -1
+    alarm_msg: -1
+    rpm: -1
