@@ -68,12 +68,14 @@ private:
       state="SCAN_STALE";
     } else if(out.linear.x>0){
       if(f<=stop_){out.linear.x=0;state="STOP";}
-      else if(f<=slow_){double k=std::clamp((f-stop_)/(slow_-stop_),0.0,1.0);out.linear.x*=k;state="SLOW";}
+      else if(f<=slow_){double k=std::clamp((f-stop_)/(slow_-stop_),0.0,1.0);out.linear.x*=std::max(k,0.05);state="SLOW";}
       else if(f<=warning_){double k=std::clamp((f-slow_)/(warning_-slow_),0.0,1.0);out.linear.x*=(0.5+0.5*k);state="WARNING";}
       if(out.angular.z>0&&l<stop_)out.angular.z=0;
       if(out.angular.z<0&&r<stop_)out.angular.z=0;
     }
     if(!reverse_&&out.linear.x<0)out.linear.x=0;
+    RCLCPP_INFO(get_logger(), "front=%.2f left=%.2f right=%.2f state=%s linx=%.2f", f, l, r, state.c_str(), out.linear.x);
+    out.linear.x = -out.linear.x;
     safe_pub_->publish(out);
     std_msgs::msg::String m;m.data=state;state_pub_->publish(m);
   }

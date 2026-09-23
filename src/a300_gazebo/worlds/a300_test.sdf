@@ -11,17 +11,33 @@
       <collision name="collision"><geometry><plane><normal>0 0 1</normal><size>50 50</size></plane></geometry></collision>
       <visual name="visual"><geometry><plane><normal>0 0 1</normal><size>50 50</size></plane></geometry></visual>
     </link></model>
-    <model name="test_wall"><static>true</static><link name="link">
-      <collision name="collision"><geometry><box><size>8 0.10 1.5</size></box></geometry></collision>
-      <visual name="visual"><geometry><box><size>8 0.10 1.5</size></box></visual><pose>0 3 0.75 0 0 0</pose>
-    </link></model>
-    <model name="test_box"><static>true</static><link name="link">
-      <collision name="collision"><geometry><box><size>0.8 0.8 1.0</size></box></geometry></collision>
-      <visual name="visual"><geometry><box><size>0.8 0.8 1.0</size></box></visual><pose>1.5 0.8 0.5 0 0 0</pose>
-    </link></model>
-    <model name="side_block"><static>true</static><link name="link">
-      <collision name="collision"><geometry><box><size>0.6 2.0 1.0</size></box></geometry></collision>
-      <visual name="visual"><geometry><box><size>0.6 2.0 1.0</size></box></visual><pose>-1.0 -1.8 0.5 0 0 0</pose>
-    </link></model>
-  </world>
+  <model name="wall_ahead"><static>true</static><link name="link">
+    <collision name="collision"><geometry><box><size>0.2 8.0 1.5</size></box></geometry></collision>
+    <visual name="visual"><geometry><box><size>0.2 8.0 1.5</size></box></geometry></visual><pose>1.2 0 0.75 0 0 0</pose>
+  </link></model>
+  <model name="status_green"><static>true</static><link name="link">
+    <visual name="visual">
+      <geometry><sphere><radius>0.30</radius></sphere></geometry>
+      <material><ambient>0 1 0 1</ambient><diffuse>0 1 0 1</diffuse></material>
+    </visual>
+  </link><pose>50 50 1.0 0 0 0</pose></model>
+  <model name="status_yellow"><static>true</static><link name="link">
+    <visual name="visual">
+      <geometry><sphere><radius>0.30</radius></sphere></geometry>
+      <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+    </visual>
+  </link><pose>50 50 1.0 0 0 0</pose></model>
+  <model name="status_orange"><static>true</static><link name="link">
+    <visual name="visual">
+      <geometry><sphere><radius>0.30</radius></sphere></geometry>
+      <material><ambient>1 0.5 0 1</ambient><diffuse>1 0.5 0 1</diffuse></material>
+    </visual>
+  </link><pose>50 50 1.0 0 0 0</pose></model>
+  <model name="status_red"><static>true</static><link name="link">
+    <visual name="visual">
+      <geometry><sphere><radius>0.30</radius></sphere></geometry>
+      <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
+    </visual>
+  </link><pose>50 50 1.0 0 0 0</pose></model>
+</world>
 </sdf>
