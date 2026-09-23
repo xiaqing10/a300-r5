@@ -23,6 +23,18 @@ SLAM and Nav2 remain outside the final safety/velocity constraint layer.
 - SLAM Toolbox
 - Nav2 (later)
 
+## Documentation
+
+| Document | Content |
+|---|---|
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Target layered architecture, topic contracts, TF tree, current-state mapping |
+| [`docs/DESIGN.md`](docs/DESIGN.md) | Per-layer algorithm specification, state machines, parameter tables, interfaces of planned modules |
+| [`docs/REVIEW.md`](docs/REVIEW.md) | Code-level review, defect list by severity (P0/P1/P2), fix recommendations |
+| [`docs/ROADMAP.md`](docs/ROADMAP.md) | Milestones M0-M7 with acceptance criteria and architecture invariants |
+| [`docs/SETUP.md`](docs/SETUP.md) | Environment setup |
+| [`docs/SIMULATION.md`](docs/SIMULATION.md) | Simulation details |
+| [`docs/REAL_LIDAR.md`](docs/REAL_LIDAR.md) | LDS-E110-R-5 integration |
+
 ## Packages
 
 - `a300_description`: robot model, wheel geometry and LiDAR mounting
@@ -116,7 +128,7 @@ The current A300 dimensions are development placeholders:
 - body: 0.75 x 0.62 x 0.75 m
 - wheel radius: 0.18 m
 - wheel track: 0.55 m
-- LiDAR position: x=0.20 m, z=0.70 m
+- LiDAR position: x=0.20 m, z=0.85 m
 - robot mass: 60 kg
 
 Before using simulation results to tune hardware stopping distances, replace them with measured A300 values. In particular, measure wheel diameter/track, LiDAR x/y/z position, actual chassis footprint and caster geometry.

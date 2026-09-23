@@ -12,6 +12,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', ['launch/status_light.launch.py']),
         ('lib/' + package_name, ['scripts/status_light']),
+        ('lib/' + package_name, ['scripts/teleop_keyboard']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -23,6 +24,7 @@ setup(
     entry_points={
         'console_scripts': [
             'status_light = a300_visualization.status_light:main',
+            'teleop_keyboard = a300_visualization.teleop_keyboard:main',
         ],
     },
 )

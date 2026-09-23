@@ -12,3 +12,10 @@ a300_safety_controller:
     max_linear_speed: 0.80
     max_angular_speed: 1.00
     reverse_allowed: false
+    avoid_gain: 0.80
+    avoid_min_linear: 0.10
+    avoid_default_dir: 1.0
+    avoid_sym_eps: 0.03
+    recover_gain: 0.6
+    recover_damp: 0.5
+    recover_eps_deg: 2.0

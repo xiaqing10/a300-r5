@@ -15,6 +15,7 @@ BALLS = {
     "SAFE": "status_green",
     "WARNING": "status_yellow",
     "SLOW": "status_orange",
+    "AVOIDING": "status_orange",
     "STOP": "status_red",
 }
 
